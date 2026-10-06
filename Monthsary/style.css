@@ -1,0 +1,898 @@
+/* ========================= 
+   RESET 
+========================= */ 
+ 
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+ 
+ 
+/* Make the "hidden" attribute always win */ 
+ 
+[hidden] { 
+ 
+    display: none !important; 
+} 
+ 
+ 
+/* ========================= 
+   BODY 
+========================= */ 
+ 
+body { 
+ 
+    font-family: 
+        "Segoe UI", 
+        Arial, 
+        sans-serif; 
+ 
+    background: #fffaf7; 
+ 
+    color: #333; 
+} 
+ 
+ 
+/* ========================= 
+   HERO 
+========================= */ 
+ 
+.hero { 
+ 
+    min-height: 60vh; 
+ 
+    display: flex; 
+ 
+    flex-direction: column; 
+ 
+    justify-content: center; 
+ 
+    align-items: center; 
+ 
+    text-align: center; 
+ 
+    padding: 80px 20px; 
+ 
+    position: relative; 
+ 
+    overflow: hidden; 
+ 
+    background: 
+        linear-gradient( 
+            135deg, 
+            #ffe4ec, 
+            #fff2df, 
+            #e8f4ff 
+        ); 
+} 
+ 
+ 
+/* Small title */ 
+ 
+.small-title { 
+ 
+    font-size: 13px; 
+ 
+    letter-spacing: 4px; 
+ 
+    font-weight: 700; 
+ 
+    color: #9b7180; 
+ 
+    margin-bottom: 18px; 
+} 
+ 
+ 
+/* Main title */ 
+ 
+.hero h1 { 
+ 
+    font-size: 
+        clamp( 
+            50px, 
+            8vw, 
+            85px 
+        ); 
+ 
+    line-height: 0.95; 
+ 
+    color: #302d3b; 
+ 
+    margin-bottom: 30px; 
+ 
+    animation: 
+        titleAppear 1s ease; 
+} 
+ 
+ 
+@keyframes titleAppear { 
+ 
+    from { 
+ 
+        opacity: 0; 
+ 
+        transform: 
+            translateY(25px); 
+ 
+    } 
+ 
+    to { 
+ 
+        opacity: 1; 
+ 
+        transform: 
+            translateY(0); 
+ 
+    } 
+ 
+} 
+ 
+ 
+/* Intro */ 
+ 
+.intro { 
+ 
+    max-width: 600px; 
+ 
+    font-size: 18px; 
+ 
+    line-height: 1.8; 
+ 
+    color: #6b6468; 
+ 
+    animation: 
+        titleAppear 1.2s ease; 
+} 
+ 
+ 
+/* ========================= 
+   FLOATING DECORATIONS 
+========================= */ 
+ 
+.floating { 
+ 
+    position: absolute; 
+ 
+    font-size: 35px; 
+ 
+    animation: 
+        floating 4s ease-in-out infinite; 
+} 
+ 
+ 
+.flower-one { 
+ 
+    top: 18%; 
+ 
+    left: 10%; 
+} 
+ 
+ 
+.flower-two { 
+ 
+    top: 28%; 
+ 
+    right: 11%; 
+ 
+    animation-delay: 1s; 
+} 
+ 
+ 
+.flower-three { 
+ 
+    bottom: 15%; 
+ 
+    left: 18%; 
+ 
+    animation-delay: 2s; 
+} 
+ 
+ 
+@keyframes floating { 
+ 
+    0%, 
+    100% { 
+ 
+        transform: 
+            translateY(0) 
+            rotate(0deg); 
+ 
+    } 
+ 
+    50% { 
+ 
+        transform: 
+            translateY(-18px) 
+            rotate(8deg); 
+ 
+    } 
+ 
+} 
+ 
+ 
+/* ========================= 
+   TEACHER SECTION 
+========================= */ 
+ 
+.teachers-section { 
+ 
+    max-width: 900px; 
+ 
+    margin: auto; 
+ 
+    padding: 
+        75px 
+        25px 
+        80px; 
+} 
+ 
+ 
+/* Grid */ 
+ 
+.teacher-grid { 
+ 
+    display: grid; 
+ 
+    grid-template-columns: 
+        minmax(0, 380px); 
+ 
+    justify-content: center; 
+ 
+    gap: 30px; 
+} 
+ 
+ 
+/* ========================= 
+   TEACHER CARD 
+========================= */ 
+ 
+.teacher-card { 
+ 
+    background: white; 
+ 
+    border-radius: 24px; 
+ 
+    overflow: hidden; 
+ 
+    cursor: pointer; 
+ 
+    box-shadow: 
+        0 10px 35px 
+        rgba(0, 0, 0, 0.08); 
+ 
+    transition: 
+        transform 0.35s ease, 
+        box-shadow 0.35s ease; 
+} 
+ 
+ 
+.teacher-card:hover { 
+ 
+    transform: 
+        translateY(-10px); 
+ 
+    box-shadow: 
+        0 20px 45px 
+        rgba(0, 0, 0, 0.14); 
+} 
+ 
+ 
+/* ========================= 
+   PHOTO 
+========================= */ 
+ 
+.photo { 
+ 
+    height: 300px; 
+ 
+    background: #eeeeee; 
+ 
+    display: flex; 
+ 
+    justify-content: center; 
+ 
+    align-items: center; 
+} 
+ 
+ 
+/* Future images */ 
+ 
+.photo img { 
+ 
+    width: 100%; 
+ 
+    height: 100%; 
+ 
+    object-fit: cover; 
+} 
+ 
+ 
+/* ========================= 
+   TEACHER INFO 
+========================= */ 
+ 
+.teacher-info { 
+ 
+    padding: 25px; 
+} 
+ 
+ 
+.teacher-info h3 { 
+ 
+    font-size: 22px; 
+ 
+    color: #302d3b; 
+ 
+    margin-bottom: 8px; 
+} 
+ 
+ 
+.teacher-info p { 
+ 
+    font-size: 14px; 
+ 
+    color: #999; 
+ 
+    margin-bottom: 17px; 
+} 
+ 
+ 
+.teacher-info span { 
+ 
+    font-size: 14px; 
+ 
+    font-weight: 700; 
+ 
+    color: #c06c84; 
+} 
+ 
+ 
+/* ========================= 
+   FOOTER 
+========================= */ 
+ 
+footer { 
+ 
+    text-align: center; 
+ 
+    padding: 
+        35px 
+        20px 
+        50px; 
+ 
+    color: #999; 
+ 
+    background: #fffaf7; 
+} 
+ 
+ 
+footer h3 { 
+ 
+    color: #c06c84; 
+ 
+    margin-bottom: 10px; 
+ 
+    font-size: 20px; 
+} 
+ 
+ 
+footer p { 
+ 
+    font-size: 14px; 
+ 
+    line-height: 1.6; 
+} 
+ 
+ 
+/* ================================================== 
+   MESSAGE PAGE 
+ 
+   IMPORTANT: 
+   This page is allowed to scroll. 
+================================================== */ 
+ 
+.message-page { 
+ 
+    min-height: 100vh; 
+ 
+    display: flex; 
+ 
+    justify-content: center; 
+ 
+    align-items: center; 
+ 
+    padding: 
+        60px 
+        30px; 
+ 
+    position: relative; 
+ 
+    /* 
+        Do NOT use overflow: hidden here. 
+        It prevents the message from scrolling. 
+    */ 
+ 
+    overflow-x: hidden; 
+ 
+    overflow-y: auto; 
+ 
+    background: 
+        linear-gradient( 
+            135deg, 
+            #ffe4ec, 
+            #fff2df, 
+            #e8f4ff 
+        ); 
+} 
+ 
+ 
+/* ========================= 
+   MESSAGE DECORATIONS 
+========================= */ 
+ 
+.message-decoration { 
+ 
+    position: absolute; 
+ 
+    font-size: 40px; 
+ 
+    opacity: 0.7; 
+ 
+    animation: 
+        floating 4s ease-in-out infinite; 
+ 
+    pointer-events: none; 
+} 
+ 
+ 
+.decoration-one { 
+ 
+    top: 15%; 
+ 
+    left: 10%; 
+} 
+ 
+ 
+.decoration-two { 
+ 
+    top: 20%; 
+ 
+    right: 12%; 
+ 
+    animation-delay: 1s; 
+} 
+ 
+ 
+.decoration-three { 
+ 
+    bottom: 15%; 
+ 
+    left: 15%; 
+ 
+    animation-delay: 2s; 
+} 
+ 
+ 
+/* ========================= 
+   MESSAGE CONTAINER 
+========================= */ 
+ 
+.message-container { 
+ 
+    width: 700px; 
+ 
+    max-width: 100%; 
+ 
+    margin: auto; 
+ 
+    text-align: center; 
+ 
+    position: relative; 
+ 
+    z-index: 2; 
+ 
+    animation: 
+        messageAppear 0.8s ease; 
+} 
+ 
+ 
+@keyframes messageAppear { 
+ 
+    from { 
+ 
+        opacity: 0; 
+ 
+        transform: 
+            translateY(35px); 
+ 
+    } 
+ 
+    to { 
+ 
+        opacity: 1; 
+ 
+        transform: 
+            translateY(0); 
+ 
+    } 
+ 
+} 
+ 
+ 
+/* ========================= 
+   ENVELOPE 
+========================= */ 
+ 
+.envelope { 
+ 
+    font-size: 70px; 
+ 
+    margin-bottom: 18px; 
+ 
+    animation: 
+        envelopeBounce 2s infinite; 
+} 
+ 
+ 
+@keyframes envelopeBounce { 
+ 
+    0%, 
+    100% { 
+ 
+        transform: 
+            translateY(0); 
+ 
+    } 
+ 
+    50% { 
+ 
+        transform: 
+            translateY(-12px); 
+ 
+    } 
+ 
+} 
+ 
+ 
+/* ========================= 
+   TEACHER NAME 
+========================= */ 
+ 
+.message-container h1 { 
+ 
+    font-size: 
+        clamp( 
+            38px, 
+            6vw, 
+            58px 
+        ); 
+ 
+    color: #302d3b; 
+ 
+    margin-bottom: 30px; 
+} 
+ 
+ 
+/* ========================= 
+   MESSAGE CARD 
+========================= */ 
+ 
+.message-card { 
+ 
+    background: white; 
+ 
+    padding: 
+        45px 
+        50px; 
+ 
+    border-radius: 28px; 
+ 
+    box-shadow: 
+        0 20px 60px 
+        rgba(0, 0, 0, 0.12); 
+} 
+ 
+ 
+/* ========================= 
+   HEART 
+========================= */ 
+ 
+.heart { 
+ 
+    font-size: 40px; 
+ 
+    margin-bottom: 25px; 
+ 
+    animation: 
+        heartbeat 1.5s infinite; 
+} 
+ 
+ 
+@keyframes heartbeat { 
+ 
+    0%, 
+    100% { 
+ 
+        transform: 
+            scale(1); 
+ 
+    } 
+ 
+    50% { 
+ 
+        transform: 
+            scale(1.15); 
+ 
+    } 
+ 
+} 
+ 
+ 
+/* ========================= 
+   ACTUAL MESSAGE 
+========================= */ 
+ 
+.message-card > p { 
+ 
+    font-size: 18px; 
+ 
+    line-height: 2; 
+ 
+    color: #5f5a5c; 
+ 
+    text-align: left; 
+ 
+    /* keeps the paragraph breaks in the message */ 
+    white-space: pre-line; 
+} 
+ 
+ 
+/* ========================= 
+   DIVIDER 
+========================= */ 
+ 
+.divider { 
+ 
+    margin: 
+        30px 
+        0; 
+ 
+    color: #d58a9d; 
+ 
+    font-size: 20px; 
+} 
+ 
+ 
+/* ========================= 
+   SIGNATURE 
+========================= */ 
+ 
+.signature { 
+ 
+    color: #b86c82; 
+ 
+    line-height: 1.8; 
+ 
+    font-size: 15px; 
+} 
+ 
+ 
+.signature strong { 
+ 
+    font-size: 17px; 
+} 
+ 
+ 
+/* ========================= 
+   BACK BUTTON 
+========================= */ 
+ 
+.back-button { 
+ 
+    border: none; 
+ 
+    padding: 
+        14px 
+        28px; 
+ 
+    margin-top: 25px; 
+ 
+    border-radius: 30px; 
+ 
+    background: #302d3b; 
+ 
+    color: white; 
+ 
+    font-size: 15px; 
+ 
+    cursor: pointer; 
+ 
+    transition: 
+        transform 0.3s ease, 
+        background 0.3s ease; 
+} 
+ 
+ 
+.back-button:hover { 
+ 
+    transform: 
+        translateY(-3px); 
+ 
+    background: #4a4658; 
+} 
+ 
+ 
+/* ========================= 
+   MOBILE 
+========================= */ 
+ 
+@media (max-width: 700px) { 
+ 
+    .teacher-grid { 
+ 
+        grid-template-columns: 
+            1fr; 
+ 
+    } 
+ 
+ 
+    .hero { 
+ 
+        min-height: 65vh; 
+ 
+        padding: 
+            70px 
+            20px; 
+ 
+    } 
+ 
+ 
+    .photo { 
+ 
+        height: 280px; 
+ 
+    } 
+ 
+ 
+    /* 
+        More space on mobile so 
+        the message can scroll naturally. 
+    */ 
+ 
+    .message-page { 
+ 
+        align-items: flex-start; 
+ 
+        padding: 
+            50px 
+            20px; 
+ 
+    } 
+ 
+ 
+    .message-card { 
+ 
+        padding: 
+            35px 
+            25px; 
+ 
+    } 
+ 
+ 
+    .message-card > p { 
+ 
+        font-size: 16px; 
+ 
+        line-height: 1.8; 
+ 
+    } 
+ 
+} 
+ 
+ 
+@media (max-width: 400px) { 
+ 
+    .hero h1 { 
+ 
+        font-size: 45px; 
+ 
+    } 
+ 
+ 
+    .message-container h1 { 
+ 
+        font-size: 34px; 
+ 
+    } 
+ 
+ 
+    .photo { 
+ 
+        height: 240px; 
+ 
+    } 
+ 
+} 
+ 
+ 
+/* ========================= 
+   MUSIC BUTTON 
+========================= */ 
+ 
+.music-toggle { 
+ 
+    position: fixed; 
+ 
+    top: 16px; 
+ 
+    right: 16px; 
+ 
+    z-index: 100; 
+ 
+    display: flex; 
+ 
+    align-items: center; 
+ 
+    gap: 8px; 
+ 
+    border: none; 
+ 
+    padding: 10px 16px; 
+ 
+    border-radius: 30px; 
+ 
+    background: rgba(255, 255, 255, 0.85); 
+ 
+    -webkit-backdrop-filter: blur(8px); 
+ 
+    backdrop-filter: blur(8px); 
+ 
+    color: #302d3b; 
+ 
+    font-size: 14px; 
+ 
+    font-weight: 600; 
+ 
+    font-family: inherit; 
+ 
+    cursor: pointer; 
+ 
+    box-shadow: 
+        0 6px 20px 
+        rgba(0, 0, 0, 0.12); 
+ 
+    transition: 
+        transform 0.3s ease, 
+        background 0.3s ease; 
+} 
+ 
+ 
+.music-toggle:hover { 
+ 
+    transform: translateY(-2px); 
+ 
+    background: white; 
+} 
+ 
+ 
+.music-icon { 
+ 
+    font-size: 16px; 
+} 
+ 
+ 
+@media (max-width: 400px) { 
+ 
+    .music-toggle { 
+ 
+        top: 12px; 
+ 
+        right: 12px; 
+ 
+        padding: 9px 13px; 
+ 
+        font-size: 13px; 
+    } 
+ 
+}

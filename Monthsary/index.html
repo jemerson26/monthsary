@@ -1,0 +1,193 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ 
+    <title>Happy Teacher's Day 💐</title> 
+ 
+    <link rel="stylesheet" href="style.css"> 
+</head> 
+ 
+<body> 
+ 
+    <!-- ========================= 
+         BACKGROUND MUSIC 
+         Lives on this page the whole time (the message opens 
+         inside this same page), so it never restarts. 
+         To use your own song, replace music.mp3. 
+    ========================== --> 
+ 
+    <audio id="bgMusic" src="music.mp3" loop preload="auto"></audio> 
+ 
+    <button 
+        id="musicToggle" 
+        class="music-toggle" 
+        type="button" 
+        aria-label="Turn music off" 
+    > 
+        <span class="music-icon">🔊</span> 
+        <span class="music-label">Music on</span> 
+    </button> 
+ 
+ 
+    <!-- ========================= 
+         LANDING VIEW 
+    ========================== --> 
+ 
+    <div id="landingView"> 
+ 
+ 
+    <!-- ========================= 
+         HERO / LANDING PAGE 
+    ========================== --> 
+ 
+    <header class="hero"> 
+ 
+        <div class="floating flower-one">🌸</div> 
+        <div class="floating flower-two">✨</div> 
+        <div class="floating flower-three">🌷</div> 
+ 
+        <p class="small-title"> 
+            A SPECIAL DAY FOR YOU 
+        </p> 
+ 
+        <h1> 
+            Happy<br> 
+            Monthsary<br> 
+            Baby Jillian 💐 
+        </h1> 
+ 
+        <p class="intro"> 
+            Thank you so much for teaching us, 
+            guiding us, and being so patient 
+            with us. ❤️ 
+        </p> 
+ 
+    </header> 
+ 
+ 
+    <!-- ========================= 
+         TEACHERS 
+    ========================== --> 
+ 
+    <main class="teachers-section"> 
+ 
+        <div class="teacher-grid"> 
+ 
+ 
+            <!-- ========================= 
+                 MA'AM BEVERLY TURING 
+            ========================== --> 
+ 
+            <div 
+                class="teacher-card" 
+                onclick="openMessage( 
+                    thanks
+                )" 
+            > 
+ 
+                <div class="photo"> 
+                    <!-- 
+                        ADD MA'AM BEVERLY'S PHOTO HERE LATER 
+ 
+                        Example: 
+                        <img src="beverly.jpg" alt="Ma'am Beverly Turing"> 
+                    --> 
+                </div> 
+ 
+                <div class="teacher-info"> 
+ 
+                    <h3> 
+                        Ma’am Beverly Turing 
+                    </h3> 
+ 
+                    <p> 
+                        C++ Programming Teacher 
+                    </p> 
+ 
+                    <span> 
+                        Open Message → 
+                    </span> 
+ 
+                </div> 
+ 
+            </div> 
+ 
+        </div> 
+ 
+    </main> 
+ 
+ 
+ 
+    <!-- ========================= 
+         FOOTER 
+    ========================== --> 
+ 
+    <footer> 
+ 
+        <h3> 
+            Happy Teacher's Day! 🌷 
+        </h3> 
+ 
+        <p> 
+            Thank you, Ma’am Beverly, 
+            for everything you do for us. ❤️ 
+        </p> 
+ 
+    </footer> 
+ 
+ 
+    </div> 
+    <!-- end landing view --> 
+ 
+ 
+    <!-- ========================= 
+         MESSAGE VIEW 
+         (was message.html; now shown inside this page 
+         so the music keeps playing without a reset) 
+    ========================== --> 
+ 
+    <div id="messageView" class="message-page" hidden> 
+ 
+        <div class="message-decoration decoration-one">🌸</div> 
+        <div class="message-decoration decoration-two">✨</div> 
+        <div class="message-decoration decoration-three">🌷</div> 
+ 
+        <main class="message-container"> 
+ 
+            <div class="envelope">💌</div> 
+ 
+            <p class="small-title">A MESSAGE FROM YOUR STUDENTS</p> 
+ 
+            <h1 id="teacherName">Teacher</h1> 
+ 
+            <div class="message-card"> 
+ 
+                <div class="heart">❤️</div> 
+ 
+                <p id="teacherMessage">Thank you for everything you do.</p> 
+ 
+                <div class="divider">✦</div> 
+ 
+                <div class="signature"> 
+                    With love and gratitude, 
+                    <br> 
+                    <strong>Mikael Angelo G. Bartolata ❤️</strong> 
+                </div> 
+ 
+            </div> 
+ 
+            <button class="back-button" onclick="goBack()"> 
+                ← Back 
+            </button> 
+ 
+        </main> 
+ 
+    </div> 
+ 
+ 
+    <script src="script.js"></script> 
+ 
+</body> 
+</html>
